@@ -24,7 +24,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 1030px;
+    width: 75%;
     height: 150px;
     background-position-y: center;
 }
@@ -83,7 +83,10 @@ nav{
 }
 
 #turma {
-    padding: 10px 170px;
+    /* padding: 10px 170px; */
+    width: 100%;
+    max-width: 80%;
+    
     border-radius: 30px;
     display: flex;
     align-items: center;
