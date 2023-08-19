@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/form.css" media="screen">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="shortcut icon" href="../img/Logo ALT UBUNTU CIRCULO.png" type="image/x-icon">
     <title>Formulário de inscrição</title>
+    <script src="../js/script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('YRDzOmDDk6ZJ_dMzE');
+        })();
+    </script>
 </head>
 
 <body>
@@ -23,7 +31,7 @@
             <fieldset class="linha1">
                 <div class="conj">
                     <label for="nomeSocial" class="lab1">Seu nome:</label>
-                    <input type="text" id="nomeSocial" placeholder="Também aceitamos seu nome social" class="btn1" #
+                    <input type="text" id="nomeSocial" placeholder="Também aceitamos seu nome social" class="btn1"
                         required>
                 </div>
                 <div class="conj1" id="conjData">
@@ -46,11 +54,11 @@
                 </div>
                 <div class="conj2">
                     <label for="cpf" class="lab1">CPF:</label>
-                    <input type="text" class="btn3" name="cpf">
+                    <input type="text" class="btn3" name="cpf" id="cpf">
                 </div>
                 <div class="conj2">
                     <label for="cep" class="lab1">CEP:</label>
-                    <input type="text" class="btn3" name="cep">
+                    <input type="text" class="btn3" name="cep" id="cep">
                 </div>
             </fieldset>
 
@@ -58,18 +66,18 @@
                 <div id="divUF" class="conj3">
                     <label for="btnUF" class="lab1">UF:</label>
                     <select class="btn1" id="btnUF">
-                        <option value="AM"></option>
-                        <option value="BA"></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="AM">
+                        <option value="BA">
+                        <option value="">
+                        <option value="">
+                        <option value="">
+                        <option value="">
+                        <option value="">
+                        <option value="">
+                        <option value="">
+                        <option value="">
+                        <option value="">
+                        <option value="">
 
                     </select>
                 </div>
@@ -100,7 +108,7 @@
             <section class="sectionEndereco">
                 <div class="conj3">
                     <label for="tel" class="lab1">NÚMERO DO WHATSAPP:</label>
-                    <input type="tel" name="tel" class="btn1" required placeholder="(DD) 9 XXXX-XXXX">
+                    <input type="tel" id="tel" name="tel" class="btn1" required placeholder="(DD) 9 XXXX-XXXX">
                 </div>
                 <div class="conj3">
                     <label for="email" class="lab1">Seu melhor email:</label>
@@ -183,14 +191,33 @@
                 <input type="checkbox" name="acordo" id="acordo" required>
                 <label for="acordo" id="lbAcordo">Você concorda que os dados sobre você serão <br>processados sob a lei de proteção de dados</label>
             </fieldset>
-            <input type="submit" value="Enviar!" id="envio">
+            <input onclick="sendMail()" type="submit" value="Enviar!" id="envio">
         </form>
     </section>
-
-
-    <div>
-        <title></title>
+    <div class="faq">
+        <p>Perguntas frequentes:</p>
+        <details>
+            <summary class="perguntaFaq" id="faq0">Como é o curso e os requisitos?</summary>
+            <section class="secFaq"><p>O nosso curso é totalmente online, os alunos acessam o conteúdo na nossa plataforma. Os requisitos para participar do processo seletivo para a nova turma do curso é ter entre 16 e 20 anos, muita vontade de aprender tecnologia.</p></section>
+        </details>
+        <details>
+            <summary class="perguntaFaq" id="faq1">O que é front-end?</summary>
+            <section class="secFaq"><p>Front-end é a parte de um site ou aplicativo que os usuários interagem diretamente. É a interface com a qual os usuários interagem visualmente e funcionalmente. Envolve a criação e a implementação dos elementos visíveis de um site ou aplicativo, como a disposição, o design, os botões, os formulários, as animações e o conteúdo. Em outras palavras, o front-end se concentra em como as coisas parecem e funcionam para os usuários finais. Tecnologias como HTML, CSS e JavaScript são comumente usadas para desenvolver a parte de front-end de um site ou aplicativo.</p></section>
+        </details>
+        <details>
+            <summary class="perguntaFaq" id="faq2">O que é back-end?</summary>
+            <section class="secFaq"><p>Back-end é a parte de um site ou aplicativo que os usuários não veem diretamente, mas que desempenha um papel fundamental em fazer as coisas funcionarem nos bastidores. Envolve a programação e a lógica que permitem que um site ou aplicativo armazene dados, gerencie usuários, processe formulários e execute operações complexas. O back-end lida com o processamento de dados, a interação com bancos de dados, a autenticação de usuários e outras funcionalidades que não são visíveis para os usuários finais. Tecnologias como linguagens de programação (como Python, Java, PHP, Ruby), servidores, bancos de dados e frameworks são comumente usadas para desenvolver a parte de back-end de um sistema</p></section>
+        </details>
+        <details>
+            <summary class="perguntaFaq" id="faq3">O que é UX/UI?</summary>
+            <section class="secFaq"><p>Em resumo, UX se concentra na experiência geral e nas emoções dos usuários durante a interação, enquanto UI se concentra no design visual e na disposição dos elementos que os usuários veem e com os quais interagem. Ambos são essenciais para criar produtos digitais que sejam agradáveis, funcionais e eficazes para os usuários.</p></section>
+        </details>
+        <details>
+            <summary class="perguntaFaq" id="faq4">Por que o inglês é tão importante?</summary>
+            <section class="secFaq"><p>Ter habilidades em inglês não é apenas benéfico para programadores, mas é quase uma necessidade no mundo da programação, dada a natureza global e colaborativa da indústria de tecnologia. Isso não significa que você precisa ser fluente, mas ter um nível razoável de compreensão e comunicação em inglês é altamente recomendado para ser um desenvolvedor eficaz e bem-sucedido. Já que para se acessar documentação técnica, aprender novas tecnologias, acessar conhecimento e dialogar com outros programadores é necessário saber minimamente inglês.</p></section>
+        </details>
     </div>
+
 </body>
 
 </html>

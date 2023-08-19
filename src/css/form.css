@@ -284,6 +284,64 @@ form {
     margin: 30px 0px;
 }
 
+.faq{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 0px;
+    background-color: #7B2798;
+    color: white;
+    font-size: 20px;
+}
+
+details{
+    border: dashed;
+}
+
+details summary:hover{
+    cursor: pointer;
+}
+
+.faq p{
+    display: flex;
+    margin: 20px 0px 20px 0px;
+}
+
+#faq0{
+    padding: 10px 465px;
+}
+
+#faq1{
+    padding: 10px 527px;
+}
+
+#faq2{
+    padding: 10px 533px;
+}
+
+#faq3{
+    padding: 10px 552px;
+}
+
+#faq4{
+    padding: 10px 448px;
+}
+
+.secFaq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 30px;
+    text-align: justify;
+}
+
+.pFaq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (min-width: 360px) and (max-width:600px) {
 
     .titulo {
